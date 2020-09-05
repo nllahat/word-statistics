@@ -1,19 +1,26 @@
-import { Injectable, HttpService, BadRequestException } from '@nestjs/common';
+import {
+  Injectable,
+  HttpService,
+  BadRequestException,
+  Inject,
+} from '@nestjs/common';
 import { WordsReader } from '../utils/wordsReader';
 import { Readable } from 'stream';
 import * as fs from 'fs';
-import { TrieService } from './trie.service';
+import { WORDS_STATS_PROVIDER_TOKEN } from '../../../shared/utils/constants';
+import { Base } from '../entities/base.entity';
 
 @Injectable()
 export class WordsService {
   private wordsReader: WordsReader;
 
   constructor(
-    private trieService: TrieService,
+    @Inject(WORDS_STATS_PROVIDER_TOKEN)
+    private wordStatsProvider: Base,
     private httpService: HttpService,
   ) {
     this.wordsReader = new WordsReader(
-      this.trieService.insertWord.bind(this.trieService),
+      this.wordStatsProvider.insertWord.bind(this.wordStatsProvider),
     );
   }
 
@@ -44,6 +51,6 @@ export class WordsService {
   }
 
   getWordCount(word: string): number {
-    return this.trieService.getWordCount(word);
+    return this.wordStatsProvider.getWordFrequency(word);
   }
 }

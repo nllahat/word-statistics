@@ -1,4 +1,6 @@
-export class TrieNode {
+import { Base } from './base.entity';
+
+class TrieNode {
   private readonly ALPHABET_SIZE = 26;
   public children: TrieNode[];
 
@@ -11,14 +13,14 @@ export class TrieNode {
   }
 }
 
-export class Trie {
+export class Trie implements Base {
   public root: TrieNode;
 
   constructor() {
     this.root = new TrieNode('#');
   }
 
-  public insert(word: string) {
+  public insertWord(word: string) {
     let curr = this.root;
 
     if (!word) {
@@ -40,7 +42,7 @@ export class Trie {
     curr.count++;
   }
 
-  public getWordCount(word: string): number {
+  public getWordFrequency(word: string): number {
     let curr = this.root;
 
     for (let i = 0; i < word.length; i++) {

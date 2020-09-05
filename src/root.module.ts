@@ -3,7 +3,7 @@ import { WordsModule } from './modules/words/words.module';
 import { ConfigModule } from '@nestjs/config';
 import { APP_INTERCEPTOR, APP_FILTER } from '@nestjs/core';
 import { ResponseTransformerInterceptor } from './shared/interceptors/responseTransformer.interceptor';
-import { AllExceptionsFilter } from './shared/interceptors/filters/allExceptions.filter';
+import { AllExceptionsFilter } from './shared/filters/allExceptions.filter';
 
 @Module({
   providers: [

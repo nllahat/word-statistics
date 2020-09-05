@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Trie } from '../utils/trieNode';
+import { Trie } from '../entities/trie.entity';
 
 @Injectable()
 export class TrieService {
@@ -10,10 +10,10 @@ export class TrieService {
   }
 
   insertWord(word: string): void {
-    this.trie.insert(word);
+    this.trie.insertWord(word);
   }
 
   getWordCount(word: string): number {
-    return this.trie.getWordCount(word);
+    return this.trie.getWordFrequency(word);
   }
 }
