@@ -15,5 +15,6 @@
         "titleBar.inactiveBackground": "#ff006299",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#ff0062"
+    "peacock.color": "#ff0062",
+    "debug.node.autoAttach": "on"
 }
