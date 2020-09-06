@@ -27,4 +27,8 @@ export class WordsInputDto {
   @IsOptional()
   @IsUrl()
   url?: string;
+
+  @IsOptional()
+  @IsString()
+  wordDelimiter?: string = ' ';
 }

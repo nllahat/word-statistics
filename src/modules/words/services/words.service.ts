@@ -24,13 +24,13 @@ export class WordsService {
     );
   }
 
-  processString(str: string): void {
+  processString(str: string, wordDelimiter: string): void {
     const readable = Readable.from([str]);
 
-    this.wordsReader.read(readable);
+    this.wordsReader.read(readable, wordDelimiter);
   }
 
-  async processUrl(url: string): Promise<void> {
+  async processUrl(url: string, wordDelimiter: string): Promise<void> {
     const response = await this.httpService
       .get(url, {
         responseType: 'stream',
@@ -38,16 +38,16 @@ export class WordsService {
       .toPromise();
 
     if (response.data) {
-      this.wordsReader.read(response.data);
+      this.wordsReader.read(response.data, wordDelimiter);
     }
   }
 
-  processFile(filePath: string): void {
+  processFile(filePath: string, wordDelimiter: string): void {
     if (!fs.existsSync(filePath)) {
       throw new BadRequestException();
     }
 
-    this.wordsReader.read(fs.createReadStream(filePath));
+    this.wordsReader.read(fs.createReadStream(filePath), wordDelimiter);
   }
 
   getWordCount(word: string): number {
