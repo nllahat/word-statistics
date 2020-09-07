@@ -161,7 +161,7 @@ describe('Words Controller', () => {
         );
         expect(wordsService.processFile).toHaveBeenCalledTimes(1);
         expect(wordsService.processUrl).toHaveBeenCalledTimes(0);
-        expect(wordsService.processString).toHaveBeenCalledTimes(1);
+        expect(wordsService.processString).toHaveBeenCalledTimes(0);
       });
 
       it('should return undefined', async () => {
