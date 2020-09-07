@@ -238,7 +238,7 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@golevelup/nestjs-modules@^0.4.1":
+"@golevelup/nestjs-modules@0.4.1", "@golevelup/nestjs-modules@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@golevelup/nestjs-modules/-/nestjs-modules-0.4.1.tgz#e24bfa607b715d4df280de9ebcc52f7121cd48f7"
   dependencies:
@@ -476,6 +476,21 @@
     consola "^2.3.0"
     node-fetch "^2.3.0"
 
+"@ogma/logger@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@ogma/logger/-/logger-0.2.2.tgz#bf37fa65ee717c6c482d22642f046f70e1f7d39a"
+
+"@ogma/nestjs-module@^0.2.1":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@ogma/nestjs-module/-/nestjs-module-0.2.2.tgz#01466b970d6ac9f28fc90eb8eb2226ddd1d45a9f"
+  dependencies:
+    "@golevelup/nestjs-modules" "0.4.1"
+    "@ogma/logger" "^0.2.2"
+
+"@ogma/platform-express@^0.2.0":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@ogma/platform-express/-/platform-express-0.2.2.tgz#2634501e6b2acc90ceda7c2564d87f897c434797"
+
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
@@ -491,12 +506,6 @@
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.2.tgz#b1665e2c461a2cd92f4c1bbf50d5454de0d4b421"
   dependencies:
     defer-to-connect "^1.0.1"
-
-"@types/axios@^0.14.0":
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/@types/axios/-/axios-0.14.0.tgz#ec2300fbe7d7dddd7eb9d3abf87999964cafce46"
-  dependencies:
-    axios "*"
 
 "@types/babel__core@^7.1.7":
   version "7.1.9"
@@ -574,6 +583,10 @@
     "@types/express-serve-static-core" "*"
     "@types/qs" "*"
     "@types/serve-static" "*"
+
+"@types/faker@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@types/faker/-/faker-5.1.0.tgz#72ba5762e0ac00c52c79e08a482962908c4959ff"
 
 "@types/graceful-fs@^4.1.2":
   version "4.1.3"
@@ -913,7 +926,7 @@ aws4@^1.8.0:
   version "1.10.1"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.10.1.tgz#e1e82e4f3e999e2cfd61b161280d16a111f86428"
 
-axios@*, axios@0.20.0:
+axios@0.20.0:
   version "0.20.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
   dependencies:
@@ -1583,8 +1596,8 @@ dont-sniff-mimetype@1.1.0:
   resolved "https://registry.yarnpkg.com/dont-sniff-mimetype/-/dont-sniff-mimetype-1.1.0.tgz#c7d0427f8bcb095762751252af59d148b0a623b2"
 
 dot-prop@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-5.2.0.tgz#c34ecc29556dc45f1f4c22697b6f4904e0cc4fcb"
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-5.3.0.tgz#90ccce708cd9cd82cc4dc8c3ddd9abdd55b20e88"
   dependencies:
     is-obj "^2.0.0"
 
@@ -2042,6 +2055,10 @@ extsprintf@1.3.0:
 extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
+
+faker@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/faker/-/faker-5.1.0.tgz#e10fa1dec4502551aee0eb771617a7e7b94692e8"
 
 fast-deep-equal@^3.1.1:
   version "3.1.3"
@@ -4261,8 +4278,8 @@ run-async@^2.4.0:
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
 
 rxjs@^6.5.4, rxjs@^6.6.0:
-  version "6.6.2"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.2.tgz#8096a7ac03f2cc4fe5860ef6e572810d9e01c0d2"
+  version "6.6.3"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
   dependencies:
     tslib "^1.9.0"
 

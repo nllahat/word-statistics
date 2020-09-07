@@ -15,6 +15,11 @@ import { GetWordCountParams } from '../dto/getWordCountParams.dto';
 export class WordsController {
   constructor(private readonly wordsService: WordsService) {}
 
+  @Get(':word')
+  getWordFrequency(@Param() params: GetWordCountParams): number {
+    return this.wordsService.getWordFrequency(params.word);
+  }
+
   @Post()
   @HttpCode(202)
   async processText(@Body() data: WordsInputDto): Promise<void> {
@@ -27,10 +32,5 @@ export class WordsController {
     } else {
       throw new BadRequestException();
     }
-  }
-
-  @Get(':word')
-  getWordCount(@Param() params: GetWordCountParams): number {
-    return this.wordsService.getWordCount(params.word);
   }
 }

@@ -34,4 +34,6 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 # Local text files
-/localFiles
+/localFiles/dic.txt
+/localFiles/itcont.txt
+/localFiles/words_alpha.txt

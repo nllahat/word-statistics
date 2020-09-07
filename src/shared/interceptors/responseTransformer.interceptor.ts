@@ -9,7 +9,6 @@ import { map } from 'rxjs/operators';
 
 export interface Response<T> {
   data: T;
-  took: string;
 }
 
 @Injectable()
@@ -19,10 +18,6 @@ export class ResponseTransformerInterceptor<T>
     context: ExecutionContext,
     next: CallHandler,
   ): Observable<Response<T>> {
-    const now = Date.now();
-
-    return next
-      .handle()
-      .pipe(map(data => ({ data, took: `${Date.now() - now} ms` })));
+    return next.handle().pipe(map(data => ({ data })));
   }
 }
