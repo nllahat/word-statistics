@@ -83,5 +83,7 @@ Because many english words share a single prefix I chose to use the `Trie` data 
 With that structure I could save memory by not saving a record for each unique word (as opposed to a `HashTable`).
 Max nodes to iterate in the `Trie` is `26`.
 
+** There is also a HashTable implementation (`src/modules/words/entities/hashTable.entity.ts`)
+
 \*\* I thought it might be an overhead to use a database for that task by these assumptions
 but let me know if you want to see any database integration experience from my side
