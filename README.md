@@ -3,7 +3,8 @@
 ## Description
 
 A Nestjs server that processes text and stores frequency for each word.
-Tested with a 4.3 GB text file
+
+*** Tested with a 4.3 GB text file
 
 ## Installation
 
